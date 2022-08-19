@@ -13,7 +13,7 @@ import com.cognizant.model.PensionerDetail;
 public interface PensionerDetailClient {
 	
 	@GetMapping("/pensionerDetail/{aadhaarNumber}")
-	public PensionerDetail findByAadhaarNumber(@RequestHeader("Authorization") String token1,  @PathVariable String aadhaarNumber);
+	public PensionerDetail findByAadhaarNumber(@PathVariable String aadhaarNumber);
 
 	@GetMapping("/allDetails")
 	public List<PensionerDetail> getAllDetail();

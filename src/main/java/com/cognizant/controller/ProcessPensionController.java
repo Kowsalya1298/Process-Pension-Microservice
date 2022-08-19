@@ -37,7 +37,7 @@ public class ProcessPensionController {
 		this.processPensionService = processPensionService;
 	}
 
-	//getting all details from pensioner details micro service
+	// getting all details from pensioner details micro service
 	@GetMapping("/details")
 	public List<PensionerDetail> allDetail() {
 		LOGGER.info("STARTED - allDetail");
@@ -46,34 +46,25 @@ public class ProcessPensionController {
 		return pensionerDetail;
 	}
 
-	//generating pension detail with pension amount for given user input
-	@PostMapping("/pensionerInput")
-	public PensionDetail getPensionDetail(@RequestHeader(name = "Authorization") String token,
-			@RequestBody PensionerInput pensionerInput) {
+	// generating pension detail with pension amount for given user input
+	@PostMapping("/processPension")
+	public PensionDetail getPensionDetail(@RequestBody PensionerInput pensionerInput) {
 		LOGGER.info("STARTED - allDetail");
 		PensionDetail pensionDetail = null;
 		try {
+			
 			pensionDetail = processPensionService.getPensionDetail(
-					pensionerDetailClient.findByAadhaarNumber(token, pensionerInput.getAadhaarNumber()),
+					pensionerDetailClient.findByAadhaarNumber(pensionerInput.getAadhaarNumber()),
 					pensionerInput);
 
 		} catch (Exception e) {
 			LOGGER.error("EXCEPTION - allDetail");
-			throw new ProcessPensionException("Pensioner Detail not coreect");
+			System.out.println(pensionerDetailClient.findByAadhaarNumber(pensionerInput.getAadhaarNumber()));
+			throw new ProcessPensionException("Pensioner Detail not correct");
 		}
 		LOGGER.info("END - allDetail");
 		return processPensionService.savePensionDetail(pensionDetail);
 
-	}
-
-	
-	//success code in case of valid pension amount 
-	@PostMapping("/processPension")
-	public ProcessPensionResponse getStatusCode(@RequestHeader(name = "Authorization") String token,
-			@RequestBody ProcessPensionInput processPensionInput) {
-		LOGGER.info("STARTED - getStatusCode");
-		LOGGER.info("END - getStatusCode");
-		return pensionDisbursementClient.getPensionDisbursement(token, processPensionInput);
 	}
 
 }

@@ -21,18 +21,14 @@ public class PensionDetail {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	private String name;
-	private String dateOfBirth;
-	private String panNumber;
-	private String pensiontype;
 	private double pensionAmount;
+	private double bankServiceCharge;
 	
-	public PensionDetail(String name, String dateOfBirth, String panNumber, String pensiontype, double pensionAmount) {
+	public PensionDetail(String name, double pensionAmount, double bankServiceCharge) {
 		super();
 		this.name = name;
-		this.dateOfBirth = dateOfBirth;
-		this.panNumber = panNumber;
-		this.pensiontype = pensiontype;
 		this.pensionAmount = pensionAmount;
+		this.bankServiceCharge= bankServiceCharge;
 	}
 	
 

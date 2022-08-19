@@ -11,10 +11,7 @@ import lombok.Setter;
 @AllArgsConstructor
 public class PensionerInput {
 
-	private String name;
-	private String dateOfBirth;
-	private String panNumber;
+	
 	private String aadhaarNumber;
-	private String pensionType;
 
 }

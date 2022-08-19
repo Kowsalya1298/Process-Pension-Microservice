@@ -27,8 +27,7 @@ public class PensionDetailTest {
 
 	@Test
 	public void BankDetailAllArgConstructorTest() {
-		PensionDetail pensionDetails1 = new PensionDetail(1, "Pratyush", "06-11-1999", "PQWER12345", "family",
-				40000.00);
+		PensionDetail pensionDetails1 = new PensionDetail(1, "Pratyush", 40000.00,500.00);
 		assertNotNull(pensionDetails1);
 	}
 
@@ -37,9 +36,6 @@ public class PensionDetailTest {
 		PensionDetail pensionDetail1 = new PensionDetail();
 		pensionDetail1.setId(1);
 		pensionDetail1.setName("Pratyush");
-		pensionDetail1.setDateOfBirth("06-11-1999");
-		pensionDetail1.setPanNumber("POQWERT12345");
-		pensionDetail1.setPensiontype("family");
 		pensionDetail1.setPensionAmount(40000.00);
 
 		assertNotNull(pensionDetail1);

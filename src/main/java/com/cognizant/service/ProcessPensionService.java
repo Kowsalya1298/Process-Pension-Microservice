@@ -28,6 +28,7 @@ public class ProcessPensionService {
 	public PensionDetail getPensionDetail(PensionerDetail pensionerDetail, PensionerInput pensionerInput) {
 		LOGGER.info("STARTED - getPensionDetail");
 		double pensionAmount = 0;
+		double bankServiceCharge = 0;
 
 		ProcessPensionResponse processPensionResponse = new ProcessPensionResponse();
 
@@ -39,17 +40,17 @@ public class ProcessPensionService {
 
 		if (pensionerDetail.getBankDetail().getBankType().equalsIgnoreCase("private")) {
 			pensionAmount = pensionAmount - 550;
-
+			bankServiceCharge=550;
 			processPensionResponse.setProcessPensionStatusCode(10);
 
 		} else if (pensionerDetail.getBankDetail().getBankType().equalsIgnoreCase("public")) {
 			pensionAmount = pensionAmount - 500;
+			bankServiceCharge=500;
 			processPensionResponse.setProcessPensionStatusCode(10);
 
 		}
 
-		PensionDetail pensionDetail = new PensionDetail(pensionerDetail.getName(), pensionerDetail.getDateOfBirth(),
-				pensionerDetail.getPanNumber(), pensionerDetail.getPensionType(), pensionAmount);
+		PensionDetail pensionDetail = new PensionDetail(pensionerDetail.getName(), pensionAmount, bankServiceCharge);
 
 		LOGGER.info("END - getPensionDetail");
 		return pensionDetail;

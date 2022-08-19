@@ -27,8 +27,7 @@ public class PensionerInputTest {
 
 	@Test
 	public void PensionerInputAllArgConstructorTest() {
-		PensionerInput pensionerInput1 = new PensionerInput("Pratyush", "06-11-1999", "PQWER12345", "1234567654678",
-				"family");
+		PensionerInput pensionerInput1 = new PensionerInput("1234567654678");
 		assertNotNull(pensionerInput1);
 	}
 
@@ -36,10 +35,6 @@ public class PensionerInputTest {
 	public void PensionerDetailSettersTest() {
 		PensionerInput pensionerDetail1 = new PensionerInput();
 		pensionerDetail1.setAadhaarNumber("1211121324343543");
-		pensionerDetail1.setName("Pratyush");
-		pensionerDetail1.setDateOfBirth("06-11-1999");
-		pensionerDetail1.setPanNumber("POQWERT12345");
-		pensionerDetail1.setPensionType("family");
 		assertNotNull(pensionerDetail1);
 
 	}
