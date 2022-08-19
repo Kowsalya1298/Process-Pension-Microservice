@@ -25,17 +25,11 @@ import com.cognizant.service.ProcessPensionService;
 public class ProcessPensionController {
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(ProcessPensionController.class);
-	private PensionerDetailClient pensionerDetailClient;
-	private ProcessPensionService processPensionService;
-	private PensionDisbursementClient pensionDisbursementClient;
-
 	@Autowired
-	public ProcessPensionController(PensionerDetailClient pensionerDetailClient,
-			PensionDisbursementClient pensionDisbursementClient, ProcessPensionService processPensionService) {
-		this.pensionerDetailClient = pensionerDetailClient;
-		this.pensionDisbursementClient = pensionDisbursementClient;
-		this.processPensionService = processPensionService;
-	}
+	private PensionerDetailClient pensionerDetailClient;
+	@Autowired
+	private ProcessPensionService processPensionService;
+	
 
 	// getting all details from pensioner details micro service
 	@GetMapping("/details")
@@ -46,7 +40,7 @@ public class ProcessPensionController {
 		return pensionerDetail;
 	}
 
-	// generating pension detail with pension amount for given user input
+	// generating pension detail (pension amount and banking charge) for given aadharnumber
 	@PostMapping("/processPension")
 	public PensionDetail getPensionDetail(@RequestBody PensionerInput pensionerInput) {
 		LOGGER.info("STARTED - allDetail");
@@ -64,6 +58,26 @@ public class ProcessPensionController {
 		}
 		LOGGER.info("END - allDetail");
 		return processPensionService.savePensionDetail(pensionDetail);
+
+	}
+	
+	// generating pensioner detail for given aadharnumber
+	@PostMapping("/pensionerDetail")
+	public PensionerDetail getPensionerDetail(@RequestBody PensionerInput pensionerInput) {
+		LOGGER.info("STARTED - allDetail");
+		PensionerDetail pensionerDetail = null;
+		try {
+			
+			pensionerDetail =
+					pensionerDetailClient.findByAadhaarNumber(pensionerInput.getAadhaarNumber());
+
+		} catch (Exception e) {
+			LOGGER.error("EXCEPTION - allDetail");
+			System.out.println(pensionerDetailClient.findByAadhaarNumber(pensionerInput.getAadhaarNumber()));
+			throw new ProcessPensionException("Pensioner Detail not correct");
+		}
+		LOGGER.info("END - allDetail");
+		return pensionerDetail;
 
 	}
 
