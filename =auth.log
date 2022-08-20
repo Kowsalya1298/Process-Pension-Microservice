@@ -2331,3 +2331,93 @@ feign.FeignException$NotFound: [404] during [GET] to [http://localhost:9081/pens
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.50.jar:9.0.50]
 	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_181]
 
+2022-08-20 21:17:15.224  INFO [ProcessPensionService,,] 17788 --- [Thread-1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-08-20 21:17:15.241  INFO [ProcessPensionService,,] 17788 --- [Thread-1] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2022-08-20 21:17:15.528  WARN [ProcessPensionService,,] 17788 --- [Thread-1] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2022-08-20 21:17:15.530  INFO [ProcessPensionService,,] 17788 --- [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-08-20 21:17:15.541  INFO [ProcessPensionService,,] 17788 --- [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-08-20 21:17:17.104  INFO [ProcessPensionService,,] 17788 --- [restartedMain] .c.ProcessPensionMicroserviceApplication : Starting ProcessPensionMicroserviceApplication using Java 1.8.0_181 on LTIN264352 with PID 17788 (C:\Workspace\microservices\Process-Pension-Microservice\target\classes started by 889068 in C:\Workspace\microservices\Process-Pension-Microservice)
+2022-08-20 21:17:17.105  INFO [ProcessPensionService,,] 17788 --- [restartedMain] .c.ProcessPensionMicroserviceApplication : No active profile set, falling back to default profiles: default
+2022-08-20 21:17:18.940  INFO [ProcessPensionService,,] 17788 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-08-20 21:17:18.990  INFO [ProcessPensionService,,] 17788 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 48 ms. Found 1 JPA repository interfaces.
+2022-08-20 21:17:19.361  INFO [ProcessPensionService,,] 17788 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=aedbabc9-619a-3221-8f27-00d06022321f
+2022-08-20 21:17:20.411  INFO [ProcessPensionService,,] 17788 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9084 (http)
+2022-08-20 21:17:20.413  INFO [ProcessPensionService,,] 17788 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-08-20 21:17:20.414  INFO [ProcessPensionService,,] 17788 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.50]
+2022-08-20 21:17:20.462  INFO [ProcessPensionService,,] 17788 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-08-20 21:17:20.462  INFO [ProcessPensionService,,] 17788 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3343 ms
+2022-08-20 21:17:20.549  INFO [ProcessPensionService,,] 17788 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2022-08-20 21:17:20.554  INFO [ProcessPensionService,,] 17788 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2022-08-20 21:17:20.555  INFO [ProcessPensionService,,] 17788 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testDB'
+2022-08-20 21:17:20.903  INFO [ProcessPensionService,,] 17788 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-08-20 21:17:20.963  INFO [ProcessPensionService,,] 17788 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-08-20 21:17:21.021  INFO [ProcessPensionService,,] 17788 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-08-20 21:17:21.022  INFO [ProcessPensionService,,] 17788 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-08-20 21:17:21.074  WARN [ProcessPensionService,,] 17788 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2022-08-20 21:17:21.237  WARN [ProcessPensionService,,] 17788 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-08-20 21:17:23.662  INFO [ProcessPensionService,,] 17788 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9084 (http) with context path ''
+2022-08-20 21:17:24.297  INFO [ProcessPensionService,,] 17788 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2022-08-20 21:17:24.299  INFO [ProcessPensionService,,] 17788 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2022-08-20 21:17:24.305  INFO [ProcessPensionService,,] 17788 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-08-20 21:17:24.341  INFO [ProcessPensionService,,] 17788 --- [restartedMain] .c.ProcessPensionMicroserviceApplication : Started ProcessPensionMicroserviceApplication in 8.206 seconds (JVM running for 48203.865)
+2022-08-20 21:17:24.346  INFO [ProcessPensionService,,] 17788 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-08-20 21:17:32.006  INFO [ProcessPensionService,,] 17788 --- [Thread-9] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-08-20 21:17:32.008  INFO [ProcessPensionService,,] 17788 --- [Thread-9] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2022-08-20 21:17:32.225  WARN [ProcessPensionService,,] 17788 --- [Thread-9] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2022-08-20 21:17:32.226  INFO [ProcessPensionService,,] 17788 --- [Thread-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2022-08-20 21:17:32.229  INFO [ProcessPensionService,,] 17788 --- [Thread-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2022-08-20 21:17:33.489  INFO [ProcessPensionService,,] 17788 --- [restartedMain] .c.ProcessPensionMicroserviceApplication : Starting ProcessPensionMicroserviceApplication using Java 1.8.0_181 on LTIN264352 with PID 17788 (C:\Workspace\microservices\Process-Pension-Microservice\target\classes started by 889068 in C:\Workspace\microservices\Process-Pension-Microservice)
+2022-08-20 21:17:33.490  INFO [ProcessPensionService,,] 17788 --- [restartedMain] .c.ProcessPensionMicroserviceApplication : No active profile set, falling back to default profiles: default
+2022-08-20 21:17:34.677  INFO [ProcessPensionService,,] 17788 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-08-20 21:17:34.713  INFO [ProcessPensionService,,] 17788 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 34 ms. Found 1 JPA repository interfaces.
+2022-08-20 21:17:34.903  INFO [ProcessPensionService,,] 17788 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=aedbabc9-619a-3221-8f27-00d06022321f
+2022-08-20 21:17:35.215  INFO [ProcessPensionService,,] 17788 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9084 (http)
+2022-08-20 21:17:35.217  INFO [ProcessPensionService,,] 17788 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-08-20 21:17:35.217  INFO [ProcessPensionService,,] 17788 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.50]
+2022-08-20 21:17:35.277  INFO [ProcessPensionService,,] 17788 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-08-20 21:17:35.277  INFO [ProcessPensionService,,] 17788 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1782 ms
+2022-08-20 21:17:35.323  INFO [ProcessPensionService,,] 17788 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2022-08-20 21:17:35.326  INFO [ProcessPensionService,,] 17788 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2022-08-20 21:17:35.327  INFO [ProcessPensionService,,] 17788 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testDB'
+2022-08-20 21:17:35.579  INFO [ProcessPensionService,,] 17788 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-08-20 21:17:35.595  INFO [ProcessPensionService,,] 17788 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-08-20 21:17:35.640  INFO [ProcessPensionService,,] 17788 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-08-20 21:17:35.640  INFO [ProcessPensionService,,] 17788 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-08-20 21:17:35.670  WARN [ProcessPensionService,,] 17788 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2022-08-20 21:17:35.818  WARN [ProcessPensionService,,] 17788 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-08-20 21:17:38.024  INFO [ProcessPensionService,,] 17788 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9084 (http) with context path ''
+2022-08-20 21:17:38.684  INFO [ProcessPensionService,,] 17788 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2022-08-20 21:17:38.686  INFO [ProcessPensionService,,] 17788 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2022-08-20 21:17:38.692  INFO [ProcessPensionService,,] 17788 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-08-20 21:17:38.733  INFO [ProcessPensionService,,] 17788 --- [restartedMain] .c.ProcessPensionMicroserviceApplication : Started ProcessPensionMicroserviceApplication in 5.963 seconds (JVM running for 48218.257)
+2022-08-20 21:17:38.739  INFO [ProcessPensionService,,] 17788 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-08-20 21:17:39.164  INFO [ProcessPensionService,,] 17788 --- [Thread-15] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-08-20 21:17:39.165  INFO [ProcessPensionService,,] 17788 --- [Thread-15] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2022-08-20 21:17:39.373  WARN [ProcessPensionService,,] 17788 --- [Thread-15] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2022-08-20 21:17:39.375  INFO [ProcessPensionService,,] 17788 --- [Thread-15] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2022-08-20 21:17:39.380  INFO [ProcessPensionService,,] 17788 --- [Thread-15] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2022-08-20 21:17:40.340  INFO [ProcessPensionService,,] 17788 --- [restartedMain] .c.ProcessPensionMicroserviceApplication : Starting ProcessPensionMicroserviceApplication using Java 1.8.0_181 on LTIN264352 with PID 17788 (C:\Workspace\microservices\Process-Pension-Microservice\target\classes started by 889068 in C:\Workspace\microservices\Process-Pension-Microservice)
+2022-08-20 21:17:40.341  INFO [ProcessPensionService,,] 17788 --- [restartedMain] .c.ProcessPensionMicroserviceApplication : No active profile set, falling back to default profiles: default
+2022-08-20 21:17:41.052  INFO [ProcessPensionService,,] 17788 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-08-20 21:17:41.075  INFO [ProcessPensionService,,] 17788 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 21 ms. Found 1 JPA repository interfaces.
+2022-08-20 21:17:41.187  INFO [ProcessPensionService,,] 17788 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=aedbabc9-619a-3221-8f27-00d06022321f
+2022-08-20 21:17:41.405  INFO [ProcessPensionService,,] 17788 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9084 (http)
+2022-08-20 21:17:41.406  INFO [ProcessPensionService,,] 17788 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-08-20 21:17:41.406  INFO [ProcessPensionService,,] 17788 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.50]
+2022-08-20 21:17:41.445  INFO [ProcessPensionService,,] 17788 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-08-20 21:17:41.445  INFO [ProcessPensionService,,] 17788 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1100 ms
+2022-08-20 21:17:41.479  INFO [ProcessPensionService,,] 17788 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2022-08-20 21:17:41.482  INFO [ProcessPensionService,,] 17788 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2022-08-20 21:17:41.483  INFO [ProcessPensionService,,] 17788 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testDB'
+2022-08-20 21:17:41.712  INFO [ProcessPensionService,,] 17788 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-08-20 21:17:41.718  INFO [ProcessPensionService,,] 17788 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-08-20 21:17:41.750  INFO [ProcessPensionService,,] 17788 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-08-20 21:17:41.751  INFO [ProcessPensionService,,] 17788 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-08-20 21:17:41.777  WARN [ProcessPensionService,,] 17788 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2022-08-20 21:17:41.871  WARN [ProcessPensionService,,] 17788 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-08-20 21:17:43.815  INFO [ProcessPensionService,,] 17788 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9084 (http) with context path ''
+2022-08-20 21:17:44.573  INFO [ProcessPensionService,,] 17788 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2022-08-20 21:17:44.574  INFO [ProcessPensionService,,] 17788 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2022-08-20 21:17:44.581  INFO [ProcessPensionService,,] 17788 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-08-20 21:17:44.616  INFO [ProcessPensionService,,] 17788 --- [restartedMain] .c.ProcessPensionMicroserviceApplication : Started ProcessPensionMicroserviceApplication in 4.94 seconds (JVM running for 48224.14)
+2022-08-20 21:17:44.618  INFO [ProcessPensionService,,] 17788 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
