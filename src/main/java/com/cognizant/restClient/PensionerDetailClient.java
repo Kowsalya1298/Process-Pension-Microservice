@@ -9,6 +9,10 @@ import org.springframework.web.bind.annotation.RequestHeader;
 
 import com.cognizant.model.PensionerDetail;
 
+/**
+ * @author 889068
+ *
+ */
 @FeignClient(name = "PensionerDetailService", url = "http://localhost:9081")
 public interface PensionerDetailClient {
 	
