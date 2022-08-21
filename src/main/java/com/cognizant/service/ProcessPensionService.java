@@ -43,12 +43,10 @@ public class ProcessPensionService {
 	}
 
 	if (pensionerDetail.getBankDetail().getBankType().equalsIgnoreCase("private")) {
-	    pensionAmount = pensionAmount - 550;
 	    bankServiceCharge = 550;
 	    processPensionResponse.setProcessPensionStatusCode(10);
 
 	} else if (pensionerDetail.getBankDetail().getBankType().equalsIgnoreCase("public")) {
-	    pensionAmount = pensionAmount - 500;
 	    bankServiceCharge = 500;
 	    processPensionResponse.setProcessPensionStatusCode(10);
 
