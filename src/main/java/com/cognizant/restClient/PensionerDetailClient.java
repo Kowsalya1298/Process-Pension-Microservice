@@ -13,7 +13,7 @@ import com.cognizant.model.PensionerDetail;
  * @author 889068
  *
  */
-@FeignClient(name = "PensionerDetailService", url = "http://localhost:9081")
+@FeignClient(name = "PensionerDetailService", url = "http://13.232.73.221:9081")
 public interface PensionerDetailClient {
 	
 	@GetMapping("/pensionerDetail/{aadhaarNumber}")
